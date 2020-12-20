@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-test-439cd": {
+      "hosting": {
+        "firebase-app": [
+          "fir-test-439cd"
+        ]
+      }
+    }
+  }
+}
