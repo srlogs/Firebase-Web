@@ -6,7 +6,14 @@ export const environment = {
   production: false,
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   firebaseConfig: {
-    // Enter your config file ra beta
+    apiKey: 'AIzaSyCFVfReist9rZ_zpiQGorNPYDTcy2E0DIE',
+    authDomain: 'fir-test-439cd.firebaseapp.com',
+    databaseURL: 'https://fir-test-439cd-default-rtdb.firebaseio.com',
+    projectId: 'fir-test-439cd',
+    storageBucket: 'fir-test-439cd.appspot.com',
+    messagingSenderId: '494492730054',
+    appId: '1:494492730054:web:8dcfbb41fe6488e1118dc7',
+    measurementId: 'G-GVDLV5NL4X',
   },
 };
 

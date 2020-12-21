@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
@@ -8,11 +8,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class OrdersService {
   constructor(private firestore: AngularFirestore) {}
   form = new FormGroup({
-    customerName: new FormControl(''),
-    orderNumber: new FormControl(''),
-    coffeeOrder: new FormControl(''),
-    completed: new FormControl(false),
-  });
+    name : new FormControl('', Validators.required),
+    email : new FormControl('', Validators.required)
+  })
 
   //Firestore CRUD actions example
   createCoffeeOrder(data : any) {
@@ -25,6 +23,18 @@ export class OrdersService {
           (err) => reject(err)
         );
     });
+  }
+
+  saveUser(data : any) {
+    return new Promise<any>((resolve, reject) => {
+      this.firestore
+        .collection('users')
+        .add(data)
+        .then(
+          (res) => {},
+          (err) => reject(err)
+        )
+    })
   }
 
   updateCoffeeOrder(data : any) {
@@ -44,4 +54,6 @@ export class OrdersService {
       .doc(data.payload.doc.id)
       .delete();
   }
+
+  
 }

@@ -9,13 +9,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     OrdersComponent,
-    OrderListComponent
+    OrderListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

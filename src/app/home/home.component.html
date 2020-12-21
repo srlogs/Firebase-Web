@@ -1,0 +1,10 @@
+<div class="container">
+    <form [formGroup]="this.orderService.form">
+        <input type="text" placeholder="Enter your name" formControlName="name">
+        <br>
+        <input type="text" placeholder="Enter your email" formControlName="email">
+        <button class="btn btn-primary" (click)="onSubmit()">
+            Submit
+          </button>
+    </form>
+</div>
